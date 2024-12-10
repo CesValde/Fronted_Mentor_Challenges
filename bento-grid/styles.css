@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+/* img {
+    max-width: 100%;
+} */
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: "DM Sans", 'serif';
+    font-weight: 400;
+    padding: 2rem 1rem ;
+    background-color: #f9f9f9;
+}
+
+/* Text styles */
+h1 {
+    font-size: 2.75rem ;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 28px ; 
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* helper classes */
+.grid {
+    display: grid;
+    gap: 1rem; 
+}
+
+/* Conteiners */
+.create {
+    letter-spacing: -1.2px;
+    place-content: center;
+    padding: 2rem !important; 
+    background-color: hsl(31, 66%, 93%);
+}
+
+.write {
+    letter-spacing: -1.2px;
+    place-content: center;
+    padding: 1.5rem !important;
+    background-color: hsl(39, 100%, 71%);
+}
+
+.social {
+    color: #f9f9f9;
+    text-align: center;
+    place-content: center;
+    background-color: hsl(256, 67%, 59%);
+}
+
+.social img {
+    max-width: 10rem;
+    margin-inline: auto;    /* margin right and left */
+}
+
+.manage {
+    position: relative;
+    overflow-x: hidden;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.manage img {
+    position: relative;
+    right: -2rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.maintain {
+    position: relative;
+    overflow: hidden;
+    background-color: hsl(39, 100%, 71%);
+}
+
+.maintain img {
+    position: absolute;
+    bottom: -3rem;
+    left: 2.2rem;
+}
+
+.schedule {
+    place-content: center;
+    padding-left: 1.5rem !important;
+    overflow: hidden;
+    background-color: hsl(254, 88%, 90%);
+}
+
+.schedule img {
+    position: relative;
+    width: 200px;
+    right: -2.5rem;
+} 
+
+.audience {
+    place-content: center;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.followers {
+    grid-template-columns: 1fr 1fr;     /* le agregue clase grid desde html .grid tiene display grid*/
+    place-items: center;
+    background-color: hsl(256, 67%, 59%);
+}
+
+
+/* layaouts  */
+.bento-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-rows: 13rem 13rem 13rem ;
+    grid-template-areas: 
+        'column1 column2 column3'
+        'column1 column2 column3'
+        'column1 column4 column4'
+        ; /* boceto del container, column y rows */
+    gap: 1rem;
+    max-width: 60rem;
+    margin-inline: auto;
+}
+
+/* Selecciona todos los hijos directos de cualquier elemento con la clase bento-grid-container >* */
+/* Selecciona cualquier elemento con la clase inside-element, sin importar dónde esté en el DOM (no necesita ser hijo de .bento-grid-container). */
+.bento-grid-container > *, .inside-element {   
+    display: grid;
+    gap: 1rem; 
+}
+
+.bento-grid-item-letter {
+    border-radius: .5rem ;
+    padding: 1rem;
+}
+
+.inside-element {
+    grid-template-columns: 1fr 1fr;
+}
+
+.inside-element:nth-child(1) {
+    grid-template-columns: .95fr 2fr;   /* .95 es decimal no ocupa la fr completa */
+}
+
+/* columnas */
+.column-one {
+    /* grid-area se complementa con grid-template-areas aplica a los grid-area de los otros column */
+    grid-area: column1;
+}
+
+.column-two {
+    grid-area: column2;
+}
+
+.column-three {
+    grid-area: column3;
+}
+
+.column-four {
+    grid-area: column4;
+}
+
+.attribution { 
+    text-align: center;
+    position: relative;
+    bottom: -12rem;
+}
+
+.attribution a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+.attribution a:visited {
+    color: blue;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 950px) {
+    .bento-grid-container {  
+        grid-template-columns: 2fr 2fr  ;
+        grid-template-rows: 13rem 13rem 13rem ;
+        grid-template-areas: 
+            'column2 column3'
+            'column2 column3'
+            'column4 column4'
+            'column1 column1'
+            ; /* boceto del container, column y rows */
+    } 
+
+    .maintain {
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .bento-grid-container {  
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto ;
+        grid-template-areas: 
+            'column2'
+            'column3'
+            'column4'
+            'column1'
+            ; /* boceto del container, column y rows */
+    } 
+
+    .column-one { /* ver si despues hace falta pq parece que no */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* hacemos una sola columna tipo landing page */
+    .inside-element, .inside-element:nth-child(1), .column-one {
+        grid-template-columns: 1fr ;
+    }
+
+    .maintain {
+        height: 120px;
+    }
+}
