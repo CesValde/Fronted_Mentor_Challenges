@@ -110,6 +110,7 @@ tr {
 
 a {
     text-decoration: none;
+    color: hsl(14, 45%, 36%);
 }
 
 a:hover {
