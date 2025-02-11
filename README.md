@@ -8,4 +8,4 @@ https://ornate-mochi-f6cc22.netlify.app/
 https://lovely-faloodeh-b67c95.netlify.app/
 
 # Recipe Omelette 
-https://eclectic-profiterole-3c9843.netlify.app/
+https://coruscating-kangaroo-ca57e7.netlify.app/
