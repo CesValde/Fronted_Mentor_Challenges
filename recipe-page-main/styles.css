@@ -97,7 +97,7 @@ table {
 }
 
 tr {
-     display: grid;
+    display: grid;
     grid-template-columns: repeat(2,1fr);
     padding: 1rem ;
     border-bottom: 1px solid hsl(30, 18%, 87%);

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: "Inter";
+    font-size: 14px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 8%);
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    min-height: 95dvh; 
+}
+
+.card {
+    width: 25em;
+    padding: 2rem;
+    background-color: hsl(0, 0%, 12%);
+    border-radius: 12px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin-inline: auto;
+    width: 94px;
+    height: 96px;
+    border-radius: 200px;
+}
+
+h1 {
+    font-weight: 500;
+    line-height: 3rem;
+}
+
+.descrip {
+    margin: 30px 0 30px 0;
+}
+
+a {
+    text-decoration: none ;
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+} 
+
+li {
+    margin-top: 1rem;
+    padding: .9rem;
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 10px;
+    transition: background .3s ease;
+}
+
+li:hover {
+    background: hsl(75, 94%, 57%);
+}
+
+li:hover a {
+    color: hsl(0, 0%, 8%);
+    font-weight: 500;
+}
+
+.attribution a{
+    color: hsl(75, 94%, 57%);
+}
