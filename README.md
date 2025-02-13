@@ -12,3 +12,6 @@ https://coruscating-kangaroo-ca57e7.netlify.app/
 
 # Social Links Profile
 https://glittery-medovik-940b32.netlify.app/
+
+# Blog Preview Card
+https://relaxed-gumdrop-ab714a.netlify.app/
