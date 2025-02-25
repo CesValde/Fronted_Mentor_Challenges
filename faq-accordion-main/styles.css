@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+body {
+    background-color: var(--Light-pink) ;
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Work Sans', 'sans-serif';
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+img, svg {      /* aplica estos estilos a los archivos tipo svg */
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem ;
+    border: 0;
+}
+
+button:hover {
+    color: purple;
+}
+
+.container {
+    background-color: var(--white);
+    max-width: 800px;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.faq-head {
+    display: flex;
+    gap: 2rem;
+}
+
+.faq-head h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.accordion-item:not(:last-child) /* no agrega el ultimo hijo */    {
+    border-bottom: 2px solid var(--Light-pink);
+}
+
+.accordion-item .icons img {
+    min-width: 30px ;
+}
+
+.accordion-item .icons .minus-icon {        /* antes de haber eventos los '-' estan invisibles */
+    display: none;
+}
+
+.accordion-descrip {
+    background-color: var(--white);
+    color: var(--grayish-purple);
+    max-height: 0;
+    overflow: hidden;       /* hidden para ocultar el texto */
+    transition: max-height 300ms ease;      /* 'ease' aceleración en los primeros momentos de la animación y desaceleración al final. */
+}
+
+.accordion-descrip p {
+    padding: 1.5rem 0;
+}
+
+.attribution {
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: purple;
+}
+
+/* Media query */
+
+@media (max-width: 540px) {
+    body {
+        background-image: url(assets/images/background-pattern-mobile.svg);
+    }
+}
