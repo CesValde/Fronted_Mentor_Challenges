@@ -15,3 +15,6 @@ https://glittery-medovik-940b32.netlify.app/
 
 # Blog Preview Card
 https://relaxed-gumdrop-ab714a.netlify.app/
+
+# FAQ accordion
+https://glowing-crumble-a053a6.netlify.app/
